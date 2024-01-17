@@ -1,0 +1,16 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  statuses: write
+
+jobs:
+  ci_cd:
+    uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
+    secrets: inherit
