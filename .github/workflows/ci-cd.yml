@@ -11,6 +11,12 @@ permissions:
   statuses: write
 
 jobs:
+  set-plain-text-env-var:
+    runs-on: ubuntu-latest
+    env:
+      MY_ENVIRONMENT: "this-is-plain-text"
+    steps:
+      - run: echo 'Set MY_ENVIRONMENT=$MY_ENVIRONMENT'
   ci_cd:
     uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
     secrets: inherit
