@@ -12,14 +12,5 @@ permissions:
 
 jobs:
   ci_cd:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set Environment Variable
-        env: 
-          MY_ENVIRONMENT: "ci-cd-env"
-        run:
-          echo "Displaying In Terminal MY_ENVIRONMENT=$MY_ENVIRONMENT"
-      - name: Call Another Workflow With Secrets
-        uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
-        secrets: inherit
-        
+    uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
+    secrets: inherit
