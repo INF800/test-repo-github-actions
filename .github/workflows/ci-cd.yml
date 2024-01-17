@@ -15,4 +15,5 @@ jobs:
   # 1. Just creating a repository secret does not pass the secret to the reusable workflow's `os.environ`.
   ci_cd:
     uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
-    secrets: inherit
+    secrets: 
+      MY_SECRET: ${{ secrets.MY_SECRET }}
