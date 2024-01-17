@@ -11,6 +11,8 @@ permissions:
   statuses: write
 
 jobs:
+  # Note:
+  # 1. Just creating a repository secret does not pass the secret to the reusable workflow's `os.environ`.
   ci_cd:
     uses: INF800/test-repo-github-action-workflows/.github/workflows/display.yml@main
     secrets: inherit
